@@ -1,0 +1,26 @@
+<div class="l-panel bg-lavender border border-secondary">
+  <div class="l-panel__header bg-light">
+    <h3 class="l-panel__heading">{{ item.name }}</h3>
+    {% if user.is_authenticated %}
+      <a href="{% url 'item_edit' pk=item.pk %}" class="l-panel__edit-btn btn btn-outline-secondary btn-sm">Edit</a>
+    {% endif %}
+  </div>
+  <div class="l-panel__body">
+    <p>
+      <strong>Head Chef:</strong>
+      {{ item.chef }}
+    </p>
+    <br>
+    <p>{{ item.description }}</p>
+    <br>
+    <p>
+      <strong>Ingredients:</strong>
+      {{ item.ingredients.all|join:", " }}
+    </p>
+    {% if item.standard %}
+      <p>
+        <em>This item is available year-round.</em>
+      </p>
+    {% endif %}
+  </div>
+</div>

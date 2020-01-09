@@ -1,0 +1,19 @@
+.l-panel.bg-lavender.border.border-secondary
+  .l-panel__header.bg-light
+    %h3.l-panel__heading= item.name
+    - if user.is_authenticated
+      %a.l-panel__edit-btn.btn.btn-outline-secondary.btn-sm(
+        href="{% url 'item_edit' pk=item.pk %}") Edit
+  .l-panel__body
+    %p
+      %strong Head Chef:
+      = item.chef
+    %br
+    %p= item.description
+    %br
+    %p
+      %strong Ingredients:
+      = item.ingredients.all|join:", "
+    - if item.standard
+      %p
+        %em This item is available year-round.

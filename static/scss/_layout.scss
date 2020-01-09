@@ -1,0 +1,51 @@
+.l-grid-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr [content] 4fr 1fr;
+}
+
+.l-header {
+  grid-column: content;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.l-content {
+  display: grid;
+  grid-column: content;
+  width: 100%;
+  justify-items: center;
+}
+
+.l-menu-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 60px 30px;
+}
+
+.l-detail-container {
+  min-width: 40%;
+}
+
+.l-panel {
+  display: flex;
+  flex-direction: column;
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0.75rem 0.5rem;
+  }
+  
+  &__body {
+    padding: 0.75rem 0.5rem;
+    margin-bottom: auto;
+  }
+  
+  &__footer {
+    padding: 0.75rem 0.5rem;
+  }
+}
+

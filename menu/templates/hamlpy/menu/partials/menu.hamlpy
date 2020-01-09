@@ -1,0 +1,16 @@
+.l-panel.bg-lavender.border.border-secondary
+  .l-panel__header.bg-light
+    %h3.l-panel__heading= menu.season
+    - if user.is_authenticated
+      %a.l-panel__edit-btn.btn.btn-outline-secondary.btn-sm(
+        href="{% url 'menu_edit' pk=menu.pk %}") Edit
+  .l-panel__body
+    %h4.h5
+      On the menu this season:
+    %ul.list-unstyled
+      - for item in menu.items.all
+        %li
+          %a.text-primary(href="{% url 'item_detail' pk=item.pk %}")= item
+  - if menu.expiration_date
+    .l-panel__footer
+      %p.text-muted.small Expires on {{ menu.expiration_date|date:"F j, Y" }}

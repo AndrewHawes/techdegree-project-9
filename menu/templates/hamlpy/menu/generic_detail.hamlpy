@@ -1,0 +1,4 @@
+- extends 'menu/base.html'
+- block content
+  .l-detail-container
+    - include partial_template_name

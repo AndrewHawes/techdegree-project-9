@@ -1,0 +1,27 @@
+- load static
+!!! 5
+%html(lang='en')
+  %head
+    %title Soda Fountain
+    %meta(charset="utf-8")
+    %meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    
+    // Bootstrap 4
+    %link(rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous")
+    
+    // Site CSS
+    %link(rel='stylesheet' href="{% static 'css/styles.css' %}")
+  
+  %body
+    .l-grid-container
+      - if user.is_authenticated
+        %a.btn.btn-sm.btn-outline-secondary.position-absolute(
+          href="{% url 'logout' %}" style="top: 1rem; left: 1rem;") Logout
+      %header.l-header.mb-3
+        %h1.display-4
+          %a.text-decoration-none(href="{% url 'menu_list' %}") Soda Fountain
+      .l-content
+        -block content

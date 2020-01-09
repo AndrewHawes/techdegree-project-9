@@ -1,0 +1,14 @@
+{% extends 'menu/base.html' %}
+{% block content %}
+  <div class="w-100 mb-4">
+    <h2 class="font-weight-light d-inline-block">Current Menus</h2>
+    {% if user.is_authenticated %}
+      <a href="{% url 'menu_new' %}" class="btn btn-outline btn-secondary float-right">New Menu</a>
+    {% endif %}
+  </div>
+  <div class="l-menu-container">
+    {% for menu in menus %}
+      {% include 'menu/partials/menu.html' %}
+    {% endfor %}
+  </div>
+{% endblock %}

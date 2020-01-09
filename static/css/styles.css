@@ -1,0 +1,70 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.l-grid-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr [content] 4fr 1fr;
+}
+
+.l-header {
+  grid-column: content;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.l-content {
+  display: grid;
+  grid-column: content;
+  width: 100%;
+  justify-items: center;
+}
+
+.l-menu-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 60px 30px;
+}
+
+.l-detail-container {
+  min-width: 40%;
+}
+
+.l-panel {
+  display: flex;
+  flex-direction: column;
+}
+.l-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0.75rem 0.5rem;
+}
+.l-panel__body {
+  padding: 0.75rem 0.5rem;
+  margin-bottom: auto;
+}
+.l-panel__footer {
+  padding: 0.75rem 0.5rem;
+}
+
+.asteriskField {
+  display: none;
+}
+
+.bg-lavender {
+  background-color: lavender !important;
+}
+
+/*# sourceMappingURL=styles.css.map */
