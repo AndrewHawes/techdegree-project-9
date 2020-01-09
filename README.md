@@ -20,7 +20,6 @@ that had some significant problems. Among them:
     - Windows: `.\env\Scripts\activate`
     - Linux/Mac: `source env/bin/activate`
 4. `pip install -r requirements.txt` to install the project dependencies.
-   - Required JavaScript files are included with the download. 
 5. `python manage.py runserver` to start the server on port 8000 (default).
 6. Open [127.0.0.1:8000](127.0.0.1:8000) in your browser.
 
