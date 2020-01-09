@@ -1,5 +1,5 @@
 # Improve a Django Project
-This is the project 9 for the Python Web Development Techdegree program.
+This is project 9 for the Python Web Development Techdegree program.
 
 The purpose of this project was to clean up and improve a simple existing project
 that had some significant problems. Among them:
