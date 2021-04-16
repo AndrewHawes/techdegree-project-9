@@ -2,7 +2,7 @@ asgiref==3.2.3
 coverage==5.0.1
 Django==3.0.2
 django-crispy-forms==1.8.1
-django-debug-toolbar==2.1
+django-debug-toolbar==2.2.1
 pytz==2019.3
 selenium==3.141.0
 sqlparse==0.3.0
